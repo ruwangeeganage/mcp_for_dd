@@ -1,6 +1,20 @@
 # debug-task-id
 
-A Node.js/TypeScript MCP server for retrieving Task Records by Task ID from AWS DynamoDB, using Zod for schema validation.
+A Node.js/TypeScript MCP server for retrieving Task Records by Task ID from AWS DynamoDB.
+
+## Integration with Cursor
+This is the json file for the MCP server:
+```json
+{
+  "mcpServers": {
+    "server-name": {
+      "command": "./debug-task-id/dist/index.js",
+      "args": [],
+      "cwd": "."
+    }
+  }
+}
+```
 
 ## Features
 
