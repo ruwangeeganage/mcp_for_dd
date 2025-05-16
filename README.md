@@ -16,6 +16,11 @@ This is the json file for the MCP server:
 }
 ```
 
+## You need to be authenticated with the AWS CLI, in order to access the DynamoDB table.
+## Set the AWS CLI profile to `dd`
+## Set the AWS CLI region to `eu-west-1`
+## Set the AWS CLI table name to `data-compliance-service-task-status-store`
+
 ## Features
 
 - Exposes an MCP server tool: **GetTaskRecordsByTaskId**
@@ -82,5 +87,4 @@ npm run inspector
 - **Input:**  
   - `taskId` (string): A unique identifier for the task.
 - **Output:**  
-  - An array of Task Records, each with fields:
-    - `policy_ref`, `action`, `created_at`, `status`, `primary_identifier_name`, `query_id`, `total_records`, `rollback`, `rollback_created_at`, `rollback_status`, `query_version`, `updated_at`, `primary_identifier_market`, `task_id`, `worker_name`, `dry_run`, `uuid`, `rollback_updated_at`, `dry_run_worker`, `primary_identifier_id`, `record_type`
+  - Array of Task Records based on selected fields
